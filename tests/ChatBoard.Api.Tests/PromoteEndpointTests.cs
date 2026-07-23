@@ -2,6 +2,7 @@ using System.Net;
 using System.Net.Http.Json;
 using ChatBoard.Api.Domain;
 using ChatBoard.Api.Features.Cards;
+using ChatBoard.Api.Features.Import;
 
 namespace ChatBoard.Api.Tests;
 
