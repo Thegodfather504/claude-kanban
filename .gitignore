@@ -1,0 +1,16 @@
+## .NET
+bin/
+obj/
+*.user
+[Bb]uild/
+artifacts/
+
+## SQLite (the board database lives on a mounted volume, not in the repo)
+*.db
+*.db-shm
+*.db-wal
+
+## IDE
+.vs/
+.idea/
+.vscode/
