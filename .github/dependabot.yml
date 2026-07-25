@@ -1,0 +1,28 @@
+version: 2
+updates:
+  # NuGet packages for the API and test projects.
+  - package-ecosystem: nuget
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      # Roll related bumps into one PR to keep the noise down.
+      efcore:
+        patterns:
+          - "Microsoft.EntityFrameworkCore*"
+      test:
+        patterns:
+          - "xunit*"
+          - "Microsoft.NET.Test.Sdk"
+          - "Microsoft.AspNetCore.Mvc.Testing"
+
+  # The actions used by the CI workflow (checkout, setup-dotnet, ...).
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns:
+          - "*"
